@@ -1,0 +1,25 @@
+{
+  "name": "curriculohugo",
+  "version": "1.0.0",
+  "description": "Site Curriculo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HugoRbrDev/siteHugoRodrigues.git"
+  },
+  "author": "Hugo Rodrigues",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HugoRbrDev/siteHugoRodrigues/issues"
+  },
+  "homepage": "https://github.com/HugoRbrDev/siteHugoRodrigues#readme",
+  "dependencies": {
+    "next": "^15.5.7",
+    "node": "^20.19.6",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  }
+}
