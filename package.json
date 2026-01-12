@@ -1,25 +1,17 @@
 {
-  "name": "curriculohugo",
+  "name": "curriculo-hugo",
+  "private": true,
   "version": "1.0.0",
-  "description": "Site Curriculo",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "next dev"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/HugoRbrDev/siteHugoRodrigues.git"
-  },
-  "author": "Hugo Rodrigues",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HugoRbrDev/siteHugoRodrigues/issues"
-  },
-  "homepage": "https://github.com/HugoRbrDev/siteHugoRodrigues#readme",
-  "dependencies": {
-    "next": "^15.5.7",
-    "node": "^20.19.6",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
   }
 }
