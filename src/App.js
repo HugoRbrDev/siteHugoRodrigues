@@ -2,6 +2,7 @@ import fotoPerfil from "./assets/foto-perfil.jpg";
 import gitHubIcon from "./assets/github.svg";
 import linkedinIcon from "./assets/linkedin.svg";
 import whatsappIcon from "./assets/whatsapp.svg";
+import baseDadosCelular from "./assets/baseDadosCelular.png";
 // App.js - Componente principal
 document.getElementById("app").innerHTML = `
   <!-- Menu Mobile Button -->
@@ -15,7 +16,13 @@ document.getElementById("app").innerHTML = `
 
   <!-- Sidebar Navigation -->
   <aside id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-gray-900 border-r border-gray-800 z-40 transform transition-transform duration-300 ease-in-out md:translate-x-0 -translate-x-full">
-    <nav class="p-6 pt-20">
+    <!-- Logo -->
+    <div class="flex justify-center items-center pt-8 pb-6 border-b border-gray-800">
+      <div class="relative group">
+        <img src="/src/assets/logo-hr.png" alt="HR Logo" class="w-24 h-16 transition-transform duration-300 group-hover:scale-110">
+      </div>
+    </div>
+    <nav class="p-6">
       <ul class="space-y-2">
         <li><a href="#sobre-mim" class="nav-link">Sobre Mim</a></li>
         <li><a href="#formacoes" class="nav-link">Formações</a></li>
@@ -281,10 +288,10 @@ document.getElementById("app").innerHTML = `
         <h2 class="section-title">Projetos</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="project-card">
-            <img src="/src/assets/projeto1.jpg" alt="Projeto 1" class="w-full h-48 object-cover bg-gray-800" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\'%3E%3Crect fill=\'%231F2937\' width=\'400\' height=\'200\'/%3E%3Ctext fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'24\' dy=\'10.5\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\'%3EProjeto 1%3C/text%3E%3C/svg%3E'">
+            <img src="${baseDadosCelular}" alt="Projeto 1" class="w-full h-48 object-cover bg-gray-800" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\'%3E%3Crect fill=\'%231F2937\' width=\'400\' height=\'200\'/%3E%3Ctext fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'24\' dy=\'10.5\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\'%3EProjeto 1%3C/text%3E%3C/svg%3E'">
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
-              <p class="text-gray-400 mb-4">Plataforma completa de e-commerce desenvolvida com React e Node.js, incluindo sistema de pagamento e gestão de estoque.</p>
+              <h3 class="text-xl font-bold mb-2">Digitalização e Automação de Gestão Hídrica (AppSheet + Google Sheets)</h3>
+              <p class="text-gray-400 mb-4">Aplicativo para controle e automação de leitura de Poços Artesianos.</p>
               <a href="https://github.com/hugorodrigues/projeto1" target="_blank" class="text-blue-400 hover:text-blue-300 underline">Ver Projeto →</a>
             </div>
           </div>
