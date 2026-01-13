@@ -71,4 +71,55 @@ function initNavigation() {
       }
     })
   })
+
+  // Toggle projetos expansíveis
+  setTimeout(() => {
+    initProjectExpansion()
+  }, 200)
+}
+
+function initProjectExpansion() {
+  const toggleButtons = document.querySelectorAll('.project-toggle-btn')
+  
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault()
+      const projectId = this.getAttribute('data-project')
+      const expandContainer = document.getElementById(`project-expand-${projectId}`)
+      
+      if (expandContainer) {
+        const isActive = expandContainer.classList.contains('active')
+        
+        // Fechar todos os outros projetos
+        document.querySelectorAll('.project-expand-container').forEach(container => {
+          if (container !== expandContainer) {
+            container.classList.remove('active')
+            container.classList.add('hidden')
+          }
+        })
+        
+        // Toggle do projeto atual
+        if (isActive) {
+          expandContainer.classList.remove('active')
+          setTimeout(() => {
+            expandContainer.classList.add('hidden')
+          }, 500) // Aguardar animação terminar
+        } else {
+          expandContainer.classList.remove('hidden')
+          // Pequeno delay para garantir que o elemento está visível antes da animação
+          setTimeout(() => {
+            expandContainer.classList.add('active')
+          }, 10)
+          
+          // Scroll suave para a área expandida
+          setTimeout(() => {
+            expandContainer.scrollIntoView({
+              behavior: 'smooth',
+              block: 'nearest'
+            })
+          }, 100)
+        }
+      }
+    })
+  })
 }

@@ -76,6 +76,43 @@
     @apply bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
   }
 
+  .project-toggle-btn {
+    @apply bg-transparent border-none p-0;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  .project-expand-container {
+    @apply mt-6 overflow-hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out, margin 0.3s ease-in-out;
+  }
+
+  .project-expand-container.active {
+    max-height: 2000px;
+    opacity: 1;
+  }
+
+  .project-expand-container.hidden {
+    display: none;
+  }
+
+  .project-expand-content {
+    @apply bg-gray-900 rounded-lg p-6 md:p-8 shadow-xl;
+  }
+
+  .project-expand-image {
+    @apply w-full rounded-lg mb-6 shadow-lg;
+    max-height: 500px;
+    object-fit: contain;
+    background-color: #1F2937;
+  }
+
+  .project-expand-text {
+    @apply text-lg;
+  }
+
   .social-link {
     @apply inline-block mx-3 hover:opacity-80 transition-opacity duration-200;
   }
