@@ -1,4 +1,5 @@
 import baseDadosCelular from "../assets/baseDadosCelular.png";
+import appscript from "../assets/appscript.png";
 
 export function Projects() {
   return `
@@ -43,6 +44,8 @@ export function Projects() {
         <div id="project-expand-1" class="project-expand-container hidden">
           <div class="project-expand-content">
             <img src="${baseDadosCelular}" alt="Detalhes Projeto 1" class="project-expand-image">
+            <img src="${appscript}" alt="Detalhes Projeto 1" class="project-expand-image">
+            
             <div class="project-expand-text">
               <p class="text-gray-300 leading-relaxed">
                 Sistema completo desenvolvido para digitalização e automação da gestão hídrica. 
