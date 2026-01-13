@@ -3,6 +3,7 @@ import gitHubIcon from "./assets/github.svg";
 import linkedinIcon from "./assets/linkedin.svg";
 import whatsappIcon from "./assets/whatsapp.svg";
 import baseDadosCelular from "./assets/baseDadosCelular.png";
+import logoHr from "./assets/logo-hr.png";
 // App.js - Componente principal
 document.getElementById("app").innerHTML = `
   <!-- Menu Mobile Button -->
@@ -19,7 +20,7 @@ document.getElementById("app").innerHTML = `
     <!-- Logo -->
     <div class="flex justify-center items-center pt-8 pb-6 border-b border-gray-800">
       <div class="relative group">
-        <img src="/src/assets/logo-hr.png" alt="HR Logo" class="w-24 h-16 transition-transform duration-300 group-hover:scale-110">
+        <img src="${logoHr}" alt="HR Logo" class="w-24 h-16 transition-transform duration-300 group-hover:scale-110">
       </div>
     </div>
     <nav class="p-6">
