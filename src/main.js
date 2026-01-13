@@ -115,9 +115,9 @@ function initProjectExpansion() {
           setTimeout(() => {
             expandContainer.scrollIntoView({
               behavior: 'smooth',
-              block: 'nearest'
+              block: 'start'
             })
-          }, 100)
+          }, 250)
         }
       }
     })
