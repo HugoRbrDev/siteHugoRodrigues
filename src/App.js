@@ -1,39 +1,11 @@
 import fotoPerfil from "./assets/foto-perfil.jpg";
-import gitHubIcon from "./assets/github.svg";
-import linkedinIcon from "./assets/linkedin.svg";
-import whatsappIcon from "./assets/whatsapp.svg";
 import baseDadosCelular from "./assets/baseDadosCelular.png";
-import logoHr from "./assets/logo-hr.png";
+import { Sidebar } from "./components/Sidebar.js";
+import { Footer } from "./components/Footer.js";
+
 // App.js - Componente principal
 document.getElementById("app").innerHTML = `
-  <!-- Menu Mobile Button -->
-  <button id="menu-button" class="fixed top-4 left-4 z-50 md:hidden bg-gray-900 p-2 rounded-lg">
-    <div id="mobile-menu" class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </button>
-
-  <!-- Sidebar Navigation -->
-  <aside id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-gray-900 border-r border-gray-800 z-40 transform transition-transform duration-300 ease-in-out md:translate-x-0 -translate-x-full">
-    <!-- Logo -->
-    <div class="flex justify-center items-center pt-8 pb-6 border-b border-gray-800">
-      <div class="relative group">
-        <img src="${logoHr}" alt="HR Logo" class="w-24 h-16 transition-transform duration-300 group-hover:scale-110">
-      </div>
-    </div>
-    <nav class="p-6">
-      <ul class="space-y-2">
-        <li><a href="#sobre-mim" class="nav-link">Sobre Mim</a></li>
-        <li><a href="#formacoes" class="nav-link">Formações</a></li>
-        <li><a href="#experiencia" class="nav-link">Experiência</a></li>
-        <li><a href="#certificados" class="nav-link">Certificados</a></li>
-        <li><a href="#competencias" class="nav-link">Competências</a></li>
-        <li><a href="#projetos" class="nav-link">Projetos</a></li>
-      </ul>
-    </nav>
-  </aside>
+  ${Sidebar()}
 
   <!-- Main Content -->
   <main class="md:ml-64">
@@ -155,7 +127,7 @@ document.getElementById("app").innerHTML = `
               <p class="text-gray-300 mb-2"><strong>Empresa:</strong> Real Estrutura</p>
               <p class="text-gray-300 mb-2"><strong>Período:</strong> 2021 - 2021</p>
               <p class="text-gray-400 mb-4">
-                 Desenvolvimento de relatórios gerenciais estruturados para monitoramento de subcontratadas, focando em KPI’s de desempenho e prazos.
+                 Desenvolvimento de relatórios gerenciais estruturados para monitoramento de subcontratadas, focando em KPI's de desempenho e prazos.
               </p>
               
             </div>
@@ -316,24 +288,6 @@ document.getElementById("app").innerHTML = `
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8">
-      <div class="content-container">
-        <div class="text-center mb-6">
-          <p class="text-gray-400">Desenvolvido por <strong class="text-white">Hugo Rodrigues</strong></p>
-        </div>
-        <div class="flex justify-center items-center">
-          <a href="https://www.linkedin.com/in/hugorodriguesbr/" target="_blank" class="social-link">
-            <img src="${linkedinIcon}" alt="LinkedIn" class="w-8 h-8">
-          </a>
-          <a href="https://wa.me/5531975418774" target="_blank" class="social-link">
-            <img src="${whatsappIcon}" alt="WhatsApp" class="w-8 h-8">
-          </a>
-          <a href="https://github.com/HugoRbrDev" target="_blank" class="social-link">
-            <img src="${gitHubIcon}" alt="GitHub" class="w-8 h-8">
-          </a>
-        </div>
-      </div>
-    </footer>
+    ${Footer()}
   </main>
 `;
