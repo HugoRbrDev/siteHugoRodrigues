@@ -2,22 +2,17 @@ import logoHr from "../assets/logo-hr.png";
 
 export function Sidebar() {
   return `
-    <!-- Menu Mobile Button -->
-    <button id="menu-button" class="fixed top-4 left-4 z-50 md:hidden bg-gray-900 p-2 rounded-lg">
-      <div id="mobile-menu" class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
+    <button id="menu-button" class="fixed top-4 left-4 z-50 md:hidden bg-sidebar p-2 rounded-lg border border-gray-200 dark:border-gray-800 shadow-md">
+      <div id="mobile-menu" class="menu-icon text-text">
+        <span class="bg-current block h-0.5 w-6 mb-1"></span>
+        <span class="bg-current block h-0.5 w-6 mb-1"></span>
+        <span class="bg-current block h-0.5 w-6"></span>
       </div>
     </button>
 
-    <!-- Sidebar Navigation -->
-    <aside id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-gray-900 border-r border-gray-800 z-40 transform transition-transform duration-300 ease-in-out md:translate-x-0 -translate-x-full">
-      <!-- Logo -->
-      <div class="flex justify-center items-center pt-8 pb-6 border-b border-gray-800">
-        <div class="relative group">
-          <img src="${logoHr}" alt="HR Logo" class="w-24 h-16 transition-transform duration-300 group-hover:scale-110">
-        </div>
+    <aside id="sidebar" class="fixed left-0 top-0 h-full w-64 bg-sidebar border-r border-gray-200 dark:border-gray-800 z-40 transform transition-transform duration-300 md:translate-x-0 -translate-x-full">
+      <div class="flex justify-center items-center pt-8 pb-6 border-b border-gray-200 dark:border-gray-800">
+        <img src="${logoHr}" alt="HR Logo" class="w-24 h-16">
       </div>
       <nav class="p-6">
         <ul class="space-y-2">

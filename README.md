@@ -22,16 +22,19 @@ Site de currículo pessoal desenvolvido com HTML, CSS, JavaScript, Tailwind CSS 
 ## 🛠️ Instalação
 
 1. Instale as dependências:
+
 ```bash
 npm install
 ```
 
 2. Inicie o servidor de desenvolvimento:
+
 ```bash
 npm run dev
 ```
 
 3. Acesse no navegador:
+
 ```
 http://localhost:3000
 ```
@@ -73,7 +76,7 @@ CurriculoHugo/
 
 ## 🎨 Personalização
 
-### Adicionar suas imagens:
+### Adicionar imagens:
 
 1. **Foto de perfil**: Substitua `/src/assets/foto-perfil.jpg`
 2. **Imagem de fundo do hero**: Substitua `/src/assets/hero-bg.jpg`
@@ -83,6 +86,7 @@ CurriculoHugo/
 ### Editar informações:
 
 Edite o arquivo `src/App.js` para personalizar:
+
 - Informações pessoais (Sobre Mim)
 - Formações
 - Experiências profissionais
@@ -94,6 +98,7 @@ Edite o arquivo `src/App.js` para personalizar:
 ## 📱 Responsividade
 
 O site é totalmente responsivo e se adapta a:
+
 - 📱 Mobile (< 768px)
 - 📱 Tablet (768px - 1024px)
 - 💻 Desktop (> 1024px)
@@ -101,3 +106,6 @@ O site é totalmente responsivo e se adapta a:
 ## 📄 Licença
 
 Este projeto é de uso pessoal.
+
+A Fazer:
+O botão de troca de tema está funcional, agora falta tratar do tema light

@@ -10,6 +10,11 @@ import { Projects } from "./components/Projects.js";
 // App.js - Componente principal
 document.getElementById("app").innerHTML = `
   ${Sidebar()}
+  // Botanão de troca de tema
+  <button id="theme-toggle" class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-accent text-white shadow-2xl hover:scale-110 transition-transform">
+    <span class="dark:hidden">🌙</span>
+    <span class="hidden dark:inline">☀️</span>
+  </button>
 
   <!-- Main Content -->
   <main class="md:ml-64">
