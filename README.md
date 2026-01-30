@@ -60,40 +60,17 @@ CurriculoHugo/
 │   ├── main.js
 │   ├── App.js
 │   ├── style.css
+│   ├── components/
+│       └── Partes do sites componentizados
 │   └── assets/
-│       ├── linkedin.svg
-│       ├── whatsapp.svg
-│       ├── github.svg
-│       ├── foto-perfil.jpg (adicione sua foto)
-│       ├── hero-bg.jpg (adicione imagem de fundo)
-│       ├── experiencia1.jpg (adicione imagens)
-│       ├── experiencia2.jpg
-│       ├── projeto1.jpg
-│       ├── projeto2.jpg
-│       └── projeto3.jpg
+│       └──imagens públicas
+│
 └── README.md
 ```
 
 ## 🎨 Personalização
 
-### Adicionar imagens:
-
-1. **Foto de perfil**: Substitua `/src/assets/foto-perfil.jpg`
-2. **Imagem de fundo do hero**: Substitua `/src/assets/hero-bg.jpg`
-3. **Imagens de experiência**: Substitua `/src/assets/experiencia1.jpg` e `experiencia2.jpg`
-4. **Imagens de projetos**: Substitua `/src/assets/projeto1.jpg`, `projeto2.jpg`, `projeto3.jpg`
-
-### Editar informações:
-
-Edite o arquivo `src/App.js` para personalizar:
-
-- Informações pessoais (Sobre Mim)
-- Formações
-- Experiências profissionais
-- Certificados
-- Competências
-- Projetos
-- Links sociais no rodapé
+- Botão de troca de tema
 
 ## 📱 Responsividade
 
@@ -106,6 +83,3 @@ O site é totalmente responsivo e se adapta a:
 ## 📄 Licença
 
 Este projeto é de uso pessoal.
-
-A Fazer:
-O botão de troca de tema está funcional, agora falta tratar do tema light
