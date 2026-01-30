@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #000000;
+    --color-sidebar: #111827;
+    --color-text: #f8fafc;
+    --color-accent: #60a5fa;
+    --color-card: #1f2937;
+    --hero-gradient: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    --hero-overlay: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  .light-mode {
+    --color-bg: #f8fafc;
+    --color-sidebar: #111827;
+    --color-text: #0f172a;
+    --color-accent: #3b82f6;
+    --color-card: #ffffff;
+    --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --hero-overlay: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(248, 250, 252, 1)
+    );
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-text transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url("/src/assets/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .content-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10;
+  }
+
+  .section {
+    @apply py-20 min-h-screen;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-12 text-center;
+  }
+
+  .nav-link {
+    @apply block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-200 rounded-lg;
+  }
+
+  .nav-link.active {
+    @apply text-white bg-gray-800 border-l-4 border-blue-500;
+  }
+
+  .card {
+    @apply bg-gray-900 rounded-lg p-6 mb-6 shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .skill-item {
+    @apply inline-block bg-gray-800 px-4 py-2 rounded-full m-2 text-sm hover:bg-gray-700 transition-colors duration-200 cursor-default;
+  }
+
+  .project-card {
+    @apply bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  .project-toggle-btn {
+    @apply bg-transparent border-none p-0;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  .project-expand-container {
+    @apply mt-6 overflow-hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out,
+      margin 0.3s ease-in-out;
+  }
+
+  .project-expand-container.active {
+    max-height: 2000px;
+    opacity: 1;
+  }
+
+  .project-expand-container.hidden {
+    display: none;
+  }
+
+  .project-expand-content {
+    @apply bg-gray-900 rounded-lg p-6 md:p-8 shadow-xl;
+  }
+
+  .project-expand-image {
+    @apply w-full rounded-lg mb-6 shadow-lg;
+    max-height: 500px;
+    object-fit: contain;
+    background-color: #1f2937;
+  }
+
+  .project-expand-text {
+    @apply text-lg;
+  }
+
+  .social-link {
+    @apply inline-block mx-3 hover:opacity-80 transition-opacity duration-200;
+  }
+}
+
+/* Menu hambúrguer animado */
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.menu-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-icon span:nth-child(3) {
+  bottom: 0;
+}
+
+.menu-icon.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
